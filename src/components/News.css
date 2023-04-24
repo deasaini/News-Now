@@ -9,20 +9,36 @@
 	font-size: 30px;
 }
 .row {
-	margin-top: 200px;
+	margin-top: 150px;
 	display: inline-grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	gap: 20px;
 	column-gap: 50px;
 }
-.col-md-4 {
+.newsItems {
 	border: 1px solid rgba(0, 0, 0, 0.8);
 	margin: 10px;
 	padding: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 09s;
+	border-radius: 20px;
+}
+.newsItems:hover {
+	background-image: linear-gradient(163deg, #eaf3ee 0%, #797982 100%);
+	border-radius: 20px;
+	transition: all 0.3s;
+	transform: scale(0.98);
+	border-radius: 20px;
+	box-shadow: 0px 0px 30px 1px rgba(230, 240, 235, 0.3);
 }
 .heading {
-	background-color: aquamarine;
 	position: absolute;
-	top: 0;
+	overflow: hidden;
+	margin-top: 20px;
+
+	top: 100px;
 	width: 3500px;
+}
+body {
+	background-image: url('https://media.istockphoto.com/id/1130355559/photo/newspaper-with-old-grunge-vintage-unreadable-paper-texture-background.jpg?s=612x612&w=0&k=20&c=_1JUs4tlWsDAZPQIkggwMRuVs6LPw9kpqurmzb4X8hw=');
 }

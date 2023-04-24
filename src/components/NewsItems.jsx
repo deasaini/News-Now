@@ -1,10 +1,11 @@
 import React from 'react';
 
 export default function NewsItem(props) {
-	let { title, description, imageUrl, newsUrl, author, date, source } = props;
+	let { title, description, imageUrl, newsUrl, author, source } = props;
+	console.log(props);
 	return (
 		<div>
-			<div className="my-3">
+			<div className="newsCard">
 				<div className="card">
 					<div
 						style={{
@@ -14,11 +15,15 @@ export default function NewsItem(props) {
 							right: '0'
 						}}
 					>
-						<span className="badge rounded-pill"> {source}" </span>
+						<span className="round-edge-box"> {source} </span>
 					</div>
 					<img
-						src={!imageUrl ? 'default url' : imageUrl}
-						className="card-img-top"
+						src={
+							!imageUrl
+								? 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80'
+								: imageUrl
+						}
+						className="card-img"
 						alt=""
 						style={{
 							width: '500px',
@@ -28,18 +33,10 @@ export default function NewsItem(props) {
 					<div className="card-body">
 						<h5 className="card-title">{title}</h5>
 						<p className="card-text">{description}</p>
-						<p className="card-tetx">
-							<small className="text-muted">
-								By {!author ? 'unknown' : author} on{' '}
-								{new Date(date).toGMTString()}
-							</small>
+						<p>
+							<small>By {!author ? 'Unknown' : author}</small>
 						</p>
-						<a
-							rel="noreferrer"
-							href={newsUrl}
-							target="_blank"
-							className="btn btn-primary"
-						>
+						<a id="read-more" href={newsUrl}>
 							Read more..
 						</a>
 					</div>
