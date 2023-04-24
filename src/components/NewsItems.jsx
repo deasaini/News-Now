@@ -2,7 +2,6 @@ import React from 'react';
 
 export default function NewsItem(props) {
 	let { title, description, imageUrl, newsUrl, author, source } = props;
-	console.log(props);
 	return (
 		<div>
 			<div className="newsCard">
